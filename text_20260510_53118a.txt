@@ -1,0 +1,30 @@
+legalmind/
+├── app/
+│   ├── agents/                # Agent 定义
+│   │   ├── orchestrator.py    # 主控 Agent
+│   │   ├── risk_agent.py
+│   │   ├── legal_agent.py
+│   │   ├── financial_agent.py
+│   │   └── cross_border_agent.py
+│   ├── chains/                # 长链推理逻辑
+│   │   ├── conflict_detector.py
+│   │   ├── obligation_miner.py
+│   │   └── priority_scheduler.py
+│   ├── graph/                 # LangGraph 工作流定义
+│   │   └── supervisor.py
+│   ├── models/                # Pydantic 数据模型
+│   ├── services/              # 外部服务（解析、向量检索）
+│   └── main.py                # FastAPI 入口
+├── data/
+│   ├── risk_patterns.json     # 风险模式图谱
+│   ├── compliance_rules/      # 法规库（GDPR/CCPA/个保法...）
+│   └── few_shot_examples/     # CoT 示例
+├── ui/
+│   └── app.py                 # Streamlit 前端
+├── scripts/
+│   ├── init_kg.py             # Neo4j 初始化
+│   └── evaluate.py            # 基准测试脚本
+├── tests/                     # 单元测试
+├── requirements.txt
+├── .env.example
+└── README.md

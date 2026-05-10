@@ -1,0 +1,1 @@
+python scripts/init_kg.py --import data/risk_patterns.json
